@@ -1,0 +1,9 @@
+$('#float-trigger').mouseenter(function() {
+  $('.floating-block').addClass('up');
+  $('.floating-block').removeClass('down');
+})
+.mouseleave(function(e) {
+  if ($(e.relatedTarget).closest('.cube-wrapper').length) return;
+  $('.floating-block').addClass('down');
+  $('.floating-block').removeClass('up');
+});
